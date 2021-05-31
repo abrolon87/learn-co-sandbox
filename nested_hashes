@@ -1,0 +1,50 @@
+school = {
+  instructors: ["Ian", "Johann", "Alex"],
+  students: ["Andrew", "Howard", "Terrance", "Daniel", "Rachel", "Natalie"]
+}
+#In this example, each key in our hash points to a value that is an array.
+
+school = {
+  instructors: ["Ian", "Johann", "Alex"],
+  students: ["Andrew", "Howard", "Terrance", "Daniel", "Rachel", "Natalie"],
+  classes: ["Software Engineering", "Data Science"]
+}
+
+instructors = school[:instructors]  
+ # => ["Ian", "Johann", "Alex"] 
+ 
+ #Here(above), we set a variable, instructors, equal to the return value of calling school[:instructors], which is simply the array of instructors.
+
+Now, to operate on that collection of instructors, we can simply operate on our instructors array.
+
+#to access data:
+instructors[0]
+#  => "Ian"
+
+or
+
+school[:instructors][0]
+#  => "Ian"
+
+#hashes in hashes
+
+homer = {name: "Homer Simpson", occupation: "Nuclear Safety Inspector", hobbies: ["Watching TV", "Eating donuts"]}
+jon = {name: "Jon Snow", occupation: "King in the North", hobbies: ["Fighting white walkers", "Knowing nothing"]}
+fred = {name: "Mr. Rogers", occupation: "Neighbor", hobbies: ["Making children feel loved and appreciated", "Singing songs"]}
+
+tv_show_characters = {
+  "Homer Simpson" => {name: "Homer Simpson", occupation: "Nuclear Safety Inspector", hobbies: ["Watching TV", "Eating donuts"]},
+  "Jon Snow" => {name: "Jon Snow", occupation: "King in the North", hobbies: ["Fighting white walkers", "Knowing nothing"]},
+  "Mr. Rogers" => {name: "Mr. Rogers", occupation: "Neighbor", hobbies: ["Making children feel loved and appreciated", "Singing songs"]}
+}
+
+tv_show_characters["Homer Simpson"]
+#=> {name: "Homer Simpson", occupation: "Nuclear Safety Inspector", hobbies: ["Watching TV", "Eating donuts"]}
+ 
+tv_show_characters["Jon Snow"][:occupation]
+#=> "King in the North"
+ 
+tv_show_characters["Mr. Rogers"][:hobbies][1]
+#=> "Singing songs"
+
+#We can even mix hash keys and array indexes, as with tv_show_characters["Mr. Rogers"][:hobbies][1]

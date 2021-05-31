@@ -1,0 +1,34 @@
+def a_method(a, b)
+  puts "hi"
+  a + b     #we don't need to write return
+end
+ 
+a_method(1,2) #=> 3
+
+#very common bug. Same problem I had in previous lab.
+def a_method(a,b)
+  puts "I got #{a}"
+  puts "I got #{b}"
+  sum = a + b
+  puts "I got #{sum}"
+end
+ 
+a_method(2,3) #=> nil (because puts is always nil)
+ 
+# Prints:
+# I got 2
+# I got 3
+# I got 5
+
+#to avoid bug:
+def a_method(a,b)
+  puts "I got #{a}"
+  puts "I got #{b}"
+  sum = a + b
+  puts "I got #{sum}"
+  sum     #don't puts 
+end
+ 
+a_method(2,3) #=> 5 (we just put the expression)
+
+#Moment for Meta-Learning: If these return values are surprising or don't make sense, test things out in IRB and / or review lessons in Programming as Conversation Part 1.

@@ -1,0 +1,24 @@
+# creating new arrays by constructors
+# literal my_array = []
+# class = my_array = Array.new 
+# => []
+puppies = ["bulldog", "german shepherd", "collie"]
+
+famous_cats = ["lil' bub", "grumpy cat", "Maru"]
+maru_cat = famous_cats.pop
+ 
+
+Calling .pop on an array will remove the last item from the end of the array. The .pop method will also supply the removed element as its return:
+p famous_cats
+#=> ["lil' bub", "grumpy cat"]
+p maru_cat
+#=> Maru
+
+Calling .shift on an array will remove the first item from the front of the array. The .shift method will also supply the removed element as a return:
+famous_cats = ["lil' bub", "grumpy cat", "Maru"]
+lil_bub = famous_cats.shift
+ 
+p famous_cats
+#=> ["grumpy cat", "Maru"]
+p lil_bub
+#=> lil' bub
